@@ -1,12 +1,10 @@
 @CHARSET "UTF-8";
 
-#background{
-	width: 320px;
-	height: 480px;
-	margin-left: auto;
-	margin-right: auto;
+
+#start{
 	background-image: url("http://maps.google.com/maps/api/staticmap?center=Stockholm,Sweden&zoom=14&size=320x480&sensor=false");
 }
+
 
 #wrapper{
 	width: 320px;

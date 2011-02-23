@@ -1,49 +1,39 @@
 $(document).ready(function() {
-//	console.log(navigator.geolocation);
-	if (navigator.geolocation) 
-	{
-		navigator.geolocation.getCurrentPosition( 
-	 
-			function (position) {  
-			
-			$('#background').css({'background-image':'url("http://maps.google.com/maps/api/staticmap?center='+position.coords.latitude+','+position.coords.longitude+'&zoom=14&size=320x480&sensor=false")'});
-			
-			// Did we get the position correctly?
-			// alert (position.coords.latitude);
-	 
-			// To see everything available in the position.coords array:
-			
-//			for (key in position.coords) {alert(position.coords.latitude+' '+position.coords.longitude)}
-//	 
-//			mapServiceProvider(position.coords.latitude,position.coords.longitude);
-			
-			$('input[value=Karta]').click(function() {
-				
-				$('#background').html('').css({'background-image':'url("http://maps.google.com/maps/api/staticmap?center='+position.coords.latitude+','+position.coords.longitude+'&zoom=16&size=320x480&markers=color:red|color:red|label:K|'+position.coords.latitude+','+position.coords.longitude+'&maptype=hybrid&sensor=false")'});
+	var latitude = 0;
+	var longitude = 0;
+	if (navigator.platform == "Linux armv7l"){
+//		alert(navigator.platform);
+		navigator.geolocation.getCurrentPosition(function (position){
+			latitude = position.coords.latitude;
+			longitude = position.coords.longitude;
+			$('#start').css({'background-image':'url("http://maps.google.com/maps/api/staticmap?center='+latitude+','+longitude+'&zoom=14&size=320x480&sensor=false")'});
+			$('#map_button').click(function() {
+				initialize();
 			});
-	 
-			}, 
-			// next function is the error callback
-			function (error)
-			{
-				switch(error.code) 
-				{
-					case error.TIMEOUT:
-						alert ('Timeout');
-						break;
-					case error.POSITION_UNAVAILABLE:
-						alert ('Position unavailable');
-						break;
-					case error.PERMISSION_DENIED:
-						alert ('Permission denied');
-						break;
-					case error.UNKNOWN_ERROR:
-						alert ('Unknown error');
-						break;
-				}
-			}
-			);
-		}
+		});
+	}else{
+		$.getJSON('http://www.geoplugin.net/json.gp?jsoncallback=?', function(data){
+
+//			console.log(data.geoplugin_latitude);
+				latitude = data.geoplugin_latitude;
+				longitude = data.geoplugin_longitude;
+				$('#start').css({'background-image':'url("http://maps.google.com/maps/api/staticmap?center='+latitude+','+longitude+'&zoom=13&size=320x480&sensor=false")'});
+				$('#map_button').click(function() {
+					initialize();
+				});
+			});
+			
+//		});
+	}
 	
-	
+	function initialize() {
+		var latlng = new google.maps.LatLng(latitude, longitude);
+		var myOptions = {
+				zoom: 13,
+				center: latlng,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		var map = new google.maps.Map(document.getElementById("map"),
+				myOptions);
+	}
 });
