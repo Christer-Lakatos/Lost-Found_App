@@ -4,10 +4,10 @@
   <head> 
   <title>Lost&Found</title> 
   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.css" />
-  <link rel="stylesheet" href="css/layout.css" />
   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
   <script src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
   <script src="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.js"></script>
+  <link rel="stylesheet" href="css/layout.css" />
   <script type="text/javascript" src="js/appJs.js"></script>
 </head> 
 
@@ -140,14 +140,17 @@
 </div>
 
 <div data-role="page" id="map_page">
-  <div data-role="header">
+  <div data-role="header" data-position="fixed" id="map_header">
     <h1>:: MAP ::</h1>
   </div>
 
-  <div data-role="content">
+  <div data-role="content" id="map_content">
      
   </div>
-  
+  <!--<div data-role="footer" data-position="fixed"> 
+	<h4>Footer content</h4> 
+  </div>
+-->
 </div>
  
  <div data-role="page" id="register">

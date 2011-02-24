@@ -5,6 +5,9 @@
 	background-image: url("http://maps.google.com/maps/api/staticmap?center=Stockholm,Sweden&zoom=14&size=320x480&sensor=false");
 }
 
+#map_page{
+	z-index: -1;
+}
 
 #wrapper{
 	width: 320px;
