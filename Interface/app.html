@@ -33,18 +33,18 @@
   <div data-role="content">
   <div data-role="collapsible" data-state="collapsed">
   <h3>I have lost something.</h3>
-  
-  <form action="#" method="get">  
-     <div data-role="fieldcontain">
-       <label for="key">Search by keywords:</label>
-       <input type="text" name="key" id="key" value=""  />
-     </div>
+   
+   <form action="#" method="get"> 
+    <div data-role="fieldcontain">
+	    <label for="search">Search by keywords:</label>
+	    <input type="search" name="keywords" id="search" value="" />
+	</div>
      
-     <form action="#" method="get">
-     <div data-role="fieldcontain">
-       <label for="map">Search on location:</label>
-       <input type="text" name="map" id="map" value=""  />
-     </div> 
+   <form action="#" method="get"> 
+    <div data-role="fieldcontain">
+	    <label for="search">Search by location:</label>
+	    <input type="search" name="location" id="search" value="" />
+	</div>
    </div>  
   </div>
 
@@ -151,19 +151,13 @@
     <h1>:: Register a find ::</h1>
     </div>
     <div data-role="content">
-    <form action="#" method="get">
     
-     <div data-role="fieldcontain">
-       <label for="category">Categories:</label>
-        <select name="categories" id="categories">
-        <option value="#">Choose a category</option>
-          <option value="keys">Keys</option>
-          <option value="wallets">Wallets</option>
-          <option value="bags">Bags</option>
-          <option value="clothes">Clothes</option>
-          <option value="persons">Persons</option>
-        </select>
-     </div>
+    <form action="#" method="get"> 
+    <div data-role="fieldcontain">
+	    <label for="search">Input search keywords:</label>
+	    <input type="search" name="keys" id="search" value="" />
+	</div>
+     
      <div data-role="fieldcontain">
        <label for="description">Description:</label>
        <input type="text" name="description" id="description" value=""  />
