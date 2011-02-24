@@ -8,7 +8,7 @@ $(document).ready(function() {
 			longitude = position.coords.longitude;
 			$('#home').css({'background-image':'url("http://maps.google.com/maps/api/staticmap?center='+latitude+','+longitude+'&zoom=14&size=320x480&sensor=false")'});
 			$('#map_button').click(function() {
-				initialize();
+				initialize(latitude, longitude);
 			});
 		});
 	}else{
@@ -19,23 +19,23 @@ $(document).ready(function() {
 				longitude = data.geoplugin_longitude;
 				$('#home').css({'background-image':'url("http://maps.google.com/maps/api/staticmap?center='+latitude+','+longitude+'&zoom=13&size=320x480&sensor=false")'});
 				$('#map_button').click(function() {
-					initialize();
+					initialize(latitude, longitude);
 				});
 			});
 			
 //		});
 	}
 	
-	function initialize() {
+	function initialize(latitude, longitude) {
 		var latlng = new google.maps.LatLng(latitude, longitude);
 		var myOptions = {
-				zoom: 13,
+				zoom: 16,
 				center: latlng,
 				mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
 		var map = new google.maps.Map(document.getElementById("map_page"),
 				myOptions);
-		var image = 'images/lost-icon.png';
+		var image = '../images/lost-icon.png';
 		var myLatLng = new google.maps.LatLng(latitude, longitude);
 		var beachMarker = new google.maps.Marker({
 		      position: latlng,
