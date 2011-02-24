@@ -1,0 +1,127 @@
+<!DOCTYPE html> 
+<html> 
+
+  <head> 
+  <title>Lost&Found</title> 
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.css" />
+  <script src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.0a1/jquery.mobile-1.0a1.min.js"></script>
+</head> 
+
+
+<body> 
+<div data-role="page" id="home">
+
+  <div data-role="header">
+    <h1>:: Lost&Found ::</h1>
+  </div>
+
+
+  <div data-role="content">
+  <div data-role="collapsible" data-state="collapsed">
+    <h3>I have found something!</h3>
+    
+    <h2 style="padding: 1em 0;">Where did you find it?</h2>
+    <ul data-role="listview" data-inset="true">
+      <li><a href="#register" data-transition="flip">Register a find</a></li>
+      <li><a href="#map" data-transition="flip">Go to map</a></li>
+      <li><a href="#hittat" data-transition="flip">Go to found stuff now</a></li>
+    </ul>
+    </div>    
+  </div>
+  
+  <div data-role="content">
+  <div data-role="collapsible" data-state="collapsed">
+  <h3>I have lost something.</h3>
+  
+  <form action="#" method="get">  
+     <div data-role="fieldcontain">
+       <label for="key">Search by keywords:</label>
+       <input type="text" name="key" id="key" value=""  />
+     </div>
+     
+     <form action="#" method="get">
+     <div data-role="fieldcontain">
+       <label for="map">Search on location:</label>
+       <input type="text" name="map" id="map" value=""  />
+     </div> 
+   </div>  
+  </div>
+
+</div>
+
+
+
+<div data-role="page" id="hittat">
+  <div data-role="header">
+    <h1>:: Findings ::</h1>
+  </div>
+
+  <div data-role="content">
+  <ul data-role="listview" data-theme="g">
+	<li><a href="">Item</a></li>
+	<li><a href="">Item</a></li>
+	<li><a href="">Item</a></li>
+</ul>
+   
+  </div>
+  
+ </div>
+ 
+ 
+  <div data-role="page" id="tappat">
+  <div data-role="header">
+    <h1>:: Tappat ::</h1>
+  </div>
+
+  <div data-role="content"> 
+    <p>Tappade grejer.</p>    
+  </div>
+
+</div>
+
+<div data-role="page" id="map">
+  <div data-role="header">
+    <h1>:: MAP ::</h1>
+  </div>
+
+  <div data-role="content">
+    <p>Map with markers here.</p>    
+  </div>
+  
+ </div>
+ 
+ <div data-role="page" id="register">
+  <div data-role="header">
+    <h1>:: Register a find ::</h1>
+    </div>
+    <div data-role="content">
+    <form action="#" method="get">
+    
+     <div data-role="fieldcontain">
+       <label for="category">Categories:</label>
+        <select name="categories" id="categories">
+        <option value="#">Choose a category</option>
+          <option value="keys">Keys</option>
+          <option value="wallets">Wallets</option>
+          <option value="bags">Bags</option>
+          <option value="clothes">Clothes</option>
+          <option value="persons">Persons</option>
+        </select>
+     </div>
+     <div data-role="fieldcontain">
+       <label for="description">Description:</label>
+       <input type="text" name="description" id="description" value=""  />
+     </div>
+     <div data-role="fieldcontain">
+       <label for="finder">Mail to finder:</label>
+       <input type="text" name="finder" id="finder" value=""  />
+     </div>
+     
+  </div>
+  
+ </div>
+
+
+</body>
+</html>
