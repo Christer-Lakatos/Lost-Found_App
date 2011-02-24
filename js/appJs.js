@@ -1,8 +1,8 @@
 $(document).ready(function() {
 	var latitude = 0;
 	var longitude = 0;
-	if (navigator.platform == "Linux armv7l"){
-//		alert(navigator.platform);
+	alert(navigator.platform);
+	if (navigator.platform == "Linux armv7l" || navigator.platform == "iPhone"){
 		navigator.geolocation.getCurrentPosition(function (position){
 			latitude = position.coords.latitude;
 			longitude = position.coords.longitude;
