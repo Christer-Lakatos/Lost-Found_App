@@ -35,7 +35,7 @@ $(document).ready(function() {
 		};
 		var map = new google.maps.Map(document.getElementById("map_content"),
 				myOptions);
-		var image = 'images/lost-icon.png';
+		var image = '../images/lost-icon.png';
 		var myLatLng = new google.maps.LatLng(latitude, longitude);
 		var beachMarker = new google.maps.Marker({
 		      position: latlng,

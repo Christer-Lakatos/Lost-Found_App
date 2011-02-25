@@ -21,31 +21,31 @@
 
   <div data-role="content">
   <div data-role="collapsible" data-state="collapsed">
-    <h3>I have found something!</h3>
+    <h3>Jag har hittat n&aring;got!</h3>
     
-    <h2 style="padding: 1em 0;">Where did you find it?</h2>
+    <h2 style="padding: 1em 0;">Var hittade du det?</h2>
     <ul data-role="listview" data-inset="true">
-      <li><a href="#register" data-transition="flip">Register a find</a></li>
-      <li><a href="#map" data-transition="flip">Go to map</a></li>
-      <li><a href="#hittat" data-transition="flip">Go to found stuff now</a></li>
+      <li><a href="#register" data-transition="flip">Registrera n&aring;got du hittat.</a></li>
+      <li><a href="#map" data-transition="flip">G&aring; till karta.</a></li>
+      <li><a href="#hittat" data-transition="flip">G&aring; till upphittade saker.</a></li>
     </ul>
     </div>    
   </div>
   
   <div data-role="content">
   <div data-role="collapsible" data-state="collapsed">
-  <h3>I have lost something.</h3>
+  <h3>Jag har tappat n&aring;got.</h3>
    
    <form action="#" method="get"> 
     <div data-role="fieldcontain">
-	    <label for="search">Search by keywords:</label>
+	    <label for="search">S&ouml;k p&aring; nyckelord</label>
 	    <input type="search" name="keywords" id="search" value="" />
 	</div>
    </form>
      
    <form action="#" method="get"> 
     <div data-role="fieldcontain">
-	    <label for="search">Search by location:</label>
+	    <label for="search">S&ouml;k via plats.</label>
 	    <input type="search" name="location" id="search" value="" />
 	</div>
 	</form>
@@ -60,50 +60,50 @@
 <!-- /FOUND PAGE -->
 <div data-role="page" id="hittat">
   <div data-role="header">
-    <h1>:: Findings ::</h1>
+    <h1>:: Hittat ::</h1>
   </div>
 
   <div data-role="content">
 		<ul data-role="listview">
 			<li>
 				<img src="images/*.jpg" />
-				<h3><a href="">Persons</a></h3>
-				<p>Lost person</p>
+				<h3><a href="">Personer</a></h3>
+				<p>Tappad person</p>
 			</li>
 			<li>
 				<img src="images/*.jpg" />
-				<h3><a href="">Animals</a></h3>
-				<p>Black and white Bordercollie</p>
+				<h3><a href="">Djur</a></h3>
+				<p>Svartvit Bordercollie</p>
 			</li>
 			<li>
 				<img src="images/*.jpg" />
-				<h3><a href="">Transportation</a></h3>
+				<h3><a href="">Transport</a></h3>
 				<p>Mountain bike</p>
 			</li>
 			<li>
 				<img src="images/*" />
-				<h3><a href="">Clothes</a></h3>
-				<p>Red scarf</p>
+				<h3><a href="">Kl&auml;</a></h3>
+				<p>R&auml; scarf</p>
 			</li>
 			<li>
 				<img src="images/*" />
-				<h3><a href="">Animal</a></h3>
-				<p>Cat with black paws</p>
+				<h3><a href="">Djur</a></h3>
+				<p>Katt med svarta tassar</p>
 			</li>
 			<li>
 				<img src="images/*.jpg" />
-				<h3><a href="">Transportation</a></h3>
+				<h3><a href="">Transport</a></h3>
 				<p>Skateboard</p>
 			</li>
 			<li>
 				<img src="images/*.jpg" />
-				<h3><a href="">Persons</a></h3>
-				<p>Lost family</p>
+				<h3><a href="">Personer</a></h3>
+				<p>Tappad familj</p>
 			</li>
 			<li>
 				<img src="images/*.jpg" />
-				<h3><a href="">Keys</a></h3>
-				<p>Boatkey with cork</p>
+				<h3><a href="">Nycklar</a></h3>
+				<p>B&aring;tnycket med kork</p>
 			</li>
 
 			<li>
@@ -132,7 +132,7 @@
 <!-- /MAP PAGE -->
 <div data-role="page" id="map_page">
   <div data-role="header">
-    <h1>:: MAP ::</h1>
+    <h1>:: Karta ::</h1>
   </div>
 
   <div data-role="content" id="map_content" style="height: 480px">
@@ -146,24 +146,24 @@
  <!-- /INPUT FINDINGS PAGE -->
  <div data-role="page" id="register">
   <div data-role="header">
-    <h1>:: Register a find ::</h1>
+    <h1>:: Registrera n&aring;got hittat ::</h1>
     </div>
     <div data-role="content">
     
     <form action="#" method="get"> 
     <div data-role="fieldcontain">
-	    <label for="search">Input search keywords:</label>
+	    <label for="search">Skriv in s&ouml;kord:</label>
 	    <input type="search" name="keys" id="search" value="" />
 	</div>
     </form>
      
      <div data-role="fieldcontain">
-       	<label for="textarea">Description:</label>
+       	<label for="textarea">beskrivning:</label>
 		<textarea cols="40" rows="10" name="textarea" id="textarea"></textarea>
      </div>
      
      <div data-role="fieldcontain">
-       <label for="finder">Mail to finder:</label>
+       <label for="finder">Maila upphittaren:</label>
        <input type="text" name="finder" id="finder" value=""  />
      </div>
      
