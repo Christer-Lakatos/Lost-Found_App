@@ -1,27 +1,11 @@
 @CHARSET "UTF-8";
 
 
-#start{
+#home{
 	background-image: url("http://maps.google.com/maps/api/staticmap?center=Stockholm,Sweden&zoom=14&size=320x480&sensor=false");
 }
 
-
-#wrapper{
-	width: 320px;
-	height: 300px;
-	padding: 100px 0px;
+#map_page{
 }
 
-input[type=button], p{
-	text-align: center;
-	font-size:x-large;
-	font-family:Comic Sans MS;
-	display: block;
-	width: 200px;
-	margin-left: auto;
-	margin-right: auto;
-}
 
-input[type=button]{
-	height: 50px;
-}
