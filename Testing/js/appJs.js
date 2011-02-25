@@ -33,7 +33,7 @@ $(document).ready(function() {
 				center: latlng,
 				mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
-		var map = new google.maps.Map(document.getElementById("map_page"),
+		var map = new google.maps.Map(document.getElementById("map_content"),
 				myOptions);
 		var image = '../images/lost-icon.png';
 		var myLatLng = new google.maps.LatLng(latitude, longitude);
